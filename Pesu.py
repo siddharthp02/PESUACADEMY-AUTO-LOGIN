@@ -1,14 +1,18 @@
 from selenium import webdriver
 import time
 from selenium.webdriver.support.ui import Select
-
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.utils import ChromeType
+from webdriver_manager.firefox import GeckoDriverManager
 
 #Set Variables Here
 sleep_time = 1  #set sleep time (1 or 0 for fast internet. 3 onwards for slow internet)
-myuser = ""     #Set username here
-mypwd = ""      #Set password here
-semester = ''   #Choose semester eg: 'Sem-1' or 'Sem-2' or 'Sem-3' or 'Sem-4' 
-
+myuser = "PES1202000449"     #Set username here
+mypwd = "Siddhu2002"      #Set password here
+semester = 'Sem-2'   #Choose semester eg: 'Sem-1' or 'Sem-2' or 'Sem-3' or 'Sem-4' 
+browser_type = "chrome" # "msedge" or "chrome" or "brave" or "firefox"
 #Open file
 topics = open("topics.txt","a+")
 
@@ -25,9 +29,19 @@ def is_file_empty(file_name):
            return True
     return False
 
-def get_website():
+def init_website():
     global browser
-    browser = webdriver.Chrome()
+    if(browser_type == "chrome"):
+        browser = webdriver.Chrome(ChromeDriverManager().install())
+    elif(browser_type == "msedge"):
+        browser = webdriver.Edge(EdgeChromiumDriverManager().install())
+    elif(browser_type == "brave"):
+        browser = webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.BRAVE).install())
+    elif(browser_type == "firefox"):
+        browser = webdriver.Firefox(executable_path=GeckoDriverManager().install())
+    else:
+        browser = webdriver.Chrome(ChromeDriverManager().install())
+    
     browser.maximize_window()
     browser.get("https://www.pesuacademy.com/Academy/")
 
@@ -76,7 +90,7 @@ def choose_sem(semester):
 
 
 #Main
-get_website()
+init_website()
 login()
 go_to_courses()
 # write_topics_to_file() #for future use
