@@ -32,6 +32,15 @@ Choose which browser you want to run it on. You may even choose one which you do
  3. Run [Pesu.py](Pesu.py): `python Pesu.py`
  4. After starting, do not click anything until the page loads onto courses page. In case it did not reach here, try changing the sleep_time to a higher value to accomodate for slower internet. 
  5. If code ran properly once. You can choose to right click on python file, and click create shortcut. Move this shortcut onto your desktop for a very easy shortcut to pesuacademy courses:) All you have to do is double click on the shortcut!
+ 
+ EXTRA: If you want your shortcut to look nice, download this image :https://play-lh.googleusercontent.com/5OUK2rqyCA1rVe_NHjXZiKJ2HficO5PC7fmwP62LHusOc6iu0lYVhYb1ZkBaOg5B9_KP
+ 
+ Go to this website and convert it into an icon(ICO) : https://icoconvert.com/
+ 
+ Right click on your shortcut -> select properties -> select change icon -> click on browse and choose your icon.
+ 
+ VOILA! YOU'RE SET!
+ 
 ## PS:
 Extra functionality for future use: Creates a file called topics.txt with every topic in every sem in your directory. It's pretty cool to see:)
 
