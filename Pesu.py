@@ -9,10 +9,10 @@ from webdriver_manager.firefox import GeckoDriverManager
 
 #Set Variables Here
 sleep_time = 1  #set sleep time (1 or 0 for fast internet. 3 onwards for slow internet)
-myuser = "PES1202000449"     #Set username here
-mypwd = "Siddhu2002"      #Set password here
-semester = 'Sem-2'   #Choose semester eg: 'Sem-1' or 'Sem-2' or 'Sem-3' or 'Sem-4' 
-browser_type = "chrome" # "msedge" or "chrome" or "brave" or "firefox"
+myuser = ""     #Set username here
+mypwd = ""      #Set password here
+semester = ''   #Choose semester eg: 'Sem-1' or 'Sem-2' or 'Sem-3' or 'Sem-4' 
+browser_type = "" # "msedge" or "chrome" or "brave" or "firefox"
 #Open file
 topics = open("topics.txt","a+")
 
