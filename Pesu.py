@@ -3,8 +3,6 @@ import time
 from selenium.webdriver.support.ui import Select
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.utils import ChromeType
 from webdriver_manager.firefox import GeckoDriverManager
 
 #Set Variables Here
@@ -12,7 +10,7 @@ sleep_time = 1  #set sleep time (1 or 0 for fast internet. 3 onwards for slow in
 myuser = ""     #Set username here
 mypwd = ""      #Set password here
 semester = ''   #Choose semester eg: 'Sem-1' or 'Sem-2' or 'Sem-3' or 'Sem-4' 
-browser_type = "" # "msedge" or "chrome" or "brave" or "firefox"
+browser_type = "" # "msedge" or "chrome"  or "firefox"
 #Open file
 topics = open("topics.txt","a+")
 
@@ -35,8 +33,6 @@ def init_website():
         browser = webdriver.Chrome(ChromeDriverManager().install())
     elif(browser_type == "msedge"):
         browser = webdriver.Edge(EdgeChromiumDriverManager().install())
-    elif(browser_type == "brave"):
-        browser = webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.BRAVE).install())
     elif(browser_type == "firefox"):
         browser = webdriver.Firefox(executable_path=GeckoDriverManager().install())
     else:
