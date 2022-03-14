@@ -23,7 +23,7 @@ Uses selenium.
 Choose the semester you require. eg: 'Sem-1' or 'Sem-2' or 'Sem-3' or 'Sem-4' and so on.
 
 - **browser_type:**  
-Choose which browser you want to run it on. You may even choose one which you don't have on your laptop.
+Choose which browser you want to run it on. You may even choose one which you don't have on your laptop. : "msedge" or "chrome"  or "firefox"
 
 ## Run the script
 
