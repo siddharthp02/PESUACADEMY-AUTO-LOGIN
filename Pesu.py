@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
+sleep_time = 1
 topics = open("topics.txt","a+")
 
 def is_file_empty(file_name):
@@ -26,17 +26,9 @@ browser = webdriver.Chrome()
 browser.maximize_window()
 browser.get("https://www.pesuacademy.com/Academy/")
 
-try:
-    username= WebDriverWait(browser, 30).until(
-    EC.presence_of_element_located((By.CSS_SELECTOR, "#j_scriptusername")) #This is a dummy element
-    )
-except:
-    browser.quit()
-    quit()
-finally:
-    password = browser.find_element_by_css_selector("body > div.login-body > div:nth-child(1) > div > div.login-form > form > fieldset > div:nth-child(3) > input")
-    btn = browser.find_element_by_css_selector("#postloginform\#\/Academy\/j_spring_security_check")
-
+time.sleep(sleep_time)
+username = browser.find_element_by_css_selector("#j_scriptusername")
+password = browser.find_element_by_css_selector("body > div.login-body > div:nth-child(1) > div > div.login-form > form > fieldset > div:nth-child(3) > input")
 btn = browser.find_element_by_css_selector("#postloginform\#\/Academy\/j_spring_security_check")
 myuser = "PES1202000449"
 mypwd = "siddhu2002"
@@ -44,19 +36,13 @@ username.send_keys(myuser)
 password.send_keys(mypwd)
 btn.click()
 
-try:
-    courses= WebDriverWait(browser, 30).until(
-    EC.presence_of_element_located((By.CSS_SELECTOR, "#menuTab_653 > a > span.menu-name")) #This is a dummy element
-)
-except:
-    browser.quit()
-    quit()
-
+time.sleep(sleep_time)
+courses = browser.find_element_by_css_selector("#menuTab_653 > a > span.menu-name")
 courses.click()
 
 if(is_file_empty("topics.txt")):
     print("Empty!")
-    time.sleep(1)
+    time.sleep(sleep_time)
     sem = browser.find_element_by_css_selector("#semesters")
     sem = sem.find_elements_by_tag_name("option")
     for semnum,semester in enumerate(sem,1):
