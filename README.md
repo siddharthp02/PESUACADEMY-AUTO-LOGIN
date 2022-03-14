@@ -27,7 +27,7 @@ Choose which browser you want to run it on. You may even choose one which you do
 
 ## Run the script
 
- 1. Edit the variables under "set variables here" to your preference.
+ 1. Open Pesu.py in an editor. Edit the variables under "set variables here" to your preference.
  2. Install dependencies:   ```pip install -r requirements.txt```
  3. Run [Pesu.py](Pesu.py): `python Pesu.py`
  4. After starting, do not click anything until the page loads onto courses page. In case it did not reach here, try changing the sleep_time to a higher value to accomodate for slower internet. 
