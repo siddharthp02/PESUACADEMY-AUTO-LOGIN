@@ -1,6 +1,9 @@
 # PESUACADEMY-AUTO-LOGIN
 Automatically logs onto PESUACADEMY website and goes to courses section for semester of choice.
 Uses selenium.
+
+## Download the zip file and extract to any location of your choice
+
 ## Prerequisites  
   
  - Python3 ([Download](https://www.python.org/downloads/))  
