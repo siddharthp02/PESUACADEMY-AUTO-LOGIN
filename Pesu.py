@@ -9,10 +9,10 @@ from selenium.webdriver.common.keys import Keys
 
 #Set Variables Here
 sleep_time = 2  #set sleep time (1 or 0 for fast internet. 3 onwards for slow internet)
-myuser = "PES1202000449"     #Set username here
-mypwd = "Siddhu2002"      #Set password here
-semester = 'Sem-4'   #Choose semester eg: 'Sem-1' or 'Sem-2' or 'Sem-3' or 'Sem-4' 
-browser_type = "msedge" # "msedge" or "chrome"  or "firefox"
+myuser = ""     #Set username here
+mypwd = ""      #Set password here
+semester = ''   #Choose semester eg: 'Sem-1' or 'Sem-2' or 'Sem-3' or 'Sem-4' 
+browser_type = "" # "msedge" or "chrome"  or "firefox"
 #Open file
 topics = open("topics.txt","a+")
 
@@ -134,7 +134,7 @@ go_to_courses()
 choose_sem(semester)
 
 # GET EVERY AV SUMMARY ON PESUACADEMY
-# for subj in range(4,6):
+# for subj in range(1,6):
 #     time.sleep(sleep_time)
 #     go_to_subject(subj)
 #     #within subject
