@@ -1,0 +1,13 @@
+# Ignore video files
+*.mp4
+*.webm
+
+# Environment files
+*.env
+
+# Text files
+*.json
+
+# Test files
+*test*
+*temp*
